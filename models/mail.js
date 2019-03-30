@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 var obj = {
-    sendMail: async function (callback) {
+    sendMail: async function (obj,callback) {
         console.log("sendMail() called");
         let transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
@@ -13,10 +13,10 @@ var obj = {
         });
         let mailOptions = {
             from: '"Fred Foo 👻" <foo@example.com>', // sender address
-            to: "mdshah9574@gmail.com", // list of receivers
-            subject: "Hello ✔", // Subject line
-            text: "Hello world?", // plain text body
-            html: "<b>Hello world?</b>" // html body
+            to: obj.receiver, // list of receivers
+            subject: obj.subject, // Subject line
+            text: obj.text, // plain text body
+            html: "<b>GPSBased Toll Collection System</b>" // html body
         };
         let info = await transporter.sendMail(mailOptions)
 
