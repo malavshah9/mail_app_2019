@@ -16,7 +16,7 @@ var obj = {
             to: obj.receiver, // list of receivers
             subject: obj.subject, // Subject line
             text: obj.text, // plain text body
-            html: "<b>GPSBased Toll Collection System</b>"+obj.text // html body
+            html: obj.text // html body
         };
         let info = await transporter.sendMail(mailOptions,callback);
 
