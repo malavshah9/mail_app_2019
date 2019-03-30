@@ -12,7 +12,7 @@ var obj = {
             }
         });
         let mailOptions = {
-            from: '"Fred Foo 👻" <foo@example.com>', // sender address
+            from: 'GPSBased TOLL COLLECTION SYSTEM', // sender address
             to: obj.receiver, // list of receivers
             subject: obj.subject, // Subject line
             text: obj.text, // plain text body
