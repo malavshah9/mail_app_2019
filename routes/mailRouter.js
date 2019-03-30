@@ -13,7 +13,7 @@ router.get('/',function(req,res,next){
 });
 router.post('/', function (req, res, next) {
 
-    demo.sendMail(req.body, function (err, rows) {
+    mail.sendMail(req.body, function (err, rows) {
 
         if (err) {
             res.json(err);
